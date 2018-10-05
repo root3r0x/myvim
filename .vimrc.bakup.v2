@@ -1,0 +1,38 @@
+syntax enable
+set number
+"set encoding=utf-8
+ 
+set guifont=SpaceMono\ Nerd\ Font\ Mono
+"set guifont=Anonymicie_NF_Normal_Font:h14
+
+call pathogen#infect()
+call pathogen#helptags()
+
+"-----------NERDTree configuration--------------------"
+"This line it's for open nerdtree at start vim"
+"autocmd vimenter * NERDTree"
+
+let NERDTreeIgnore = ['__pycache__', '\.pyc$', '\.o$', '\.so$', '\.a$', '\.swp', '*\.swp', '\.swo', '\.swn', '\.swh', '\.swm', '\.swl', '\.swk', '\.sw*$', '[a-zA-Z]*egg[a-zA-Z]*', '.DS_Store']
+
+let NERDTreeShowHidden=1
+let g:NERDTreeWinPos="left"
+let g:NERDTreeDirArrows=0
+map <C-t> :NERDTreeToggle<CR>
+"-----------------------------------------------------"
+
+
+set background=dark
+"set termguicolors
+
+colorscheme deep-space
+"colorscheme railscasts"
+"colorscheme sexy-railscasts-256"
+"let g:deepspace_italics=1
+"let g:airline_theme='deep_space'"
+let g:airline_theme= 'airlineish'
+"Formato del relog de vim"
+let g:airline#extensions#clock#format = '%H:%M'
+let g:airline_powerline_fonts=1
+
+let g:webdevicons_enable=1
+let g:webdevicons_enable_nerdtree=1
