@@ -1,0 +1,18 @@
+set number
+
+call pathogen#infect()
+call pathogen#helptags()
+
+"autocmd vimenter * NERDTree"
+
+set background=dark
+set termguicolors
+
+colorscheme deep-space
+"colorscheme railscasts"
+"colorscheme sexy-railscasts-256"
+let g:deepspace_italics=1
+"let g:airline_theme='deep_space'"
+let g:airline_theme= 'airlineish'
+"Formato del relog de vim"
+let g:airline#extensions#clock#format = '%H:%M' 
