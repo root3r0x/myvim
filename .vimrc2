@@ -1,0 +1,77 @@
+"##############################################################################################################"
+ "This sample uses Vundle package manager install"
+ "please adjust if you use Pathogen, NeoBundle, etc"
+"# step 1: install"
+"# being example Vundle install"
+set nocompatible "# use vim defaults"
+filetype off "# filetype needs to be off before Vundle"
+
+set rtp+=$HOME/.vim/bundle/Vundle.vim "#set the runtime path to include Vundle and initialize"
+
+let path='~/.vim/bundle'
+call vundle#begin(path)
+"Plugin 'bling/vim-airline'"
+Plugin 'gmarik/Vundle.vim' 
+
+
+"Pluggins"
+Plugin 'scrooloose/nerdtree'  "#nerdtree"
+Plugin 'rafi/awesome-vim-colorschemes' "#temas"
+Plugin 'NLKNguyen/papercolor-theme'
+Plugin  'ryanoasis/nerd-fonts'
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'valloric/youcompleteme'
+
+Plugin 'ryanoasis/vim-devicons'
+
+
+"################PLUGINS ###################################################"
+
+call vundle#end()
+
+filetype plugin indent on "# required end example Vundle install"
+
+"step 2: font configuration"
+"#These are the basic settings to get the font to work (required):"
+"#set guifont=DroidSansMonoPLNerd:h12"
+"#Configuraciones de vim en general"
+set guifont=SpaceMono\ Nerd\ Font\ Mono   "#Tipo de letra"
+syntax enable							  "# Syntax"
+set number								  "#Numeracion"
+"#set background=dark"
+set termguicolors
+colorscheme deep-space					  "#tema"
+"#colorscheme PaperColor"
+
+set encoding=utf-8
+
+"#required if using https://github.com/bling/vim-airline"
+"#let g:airline_powerline_fonts=1"
+
+
+"#-----------NERDTree configuration--------------------"
+"#This line it's for open nerdtree at start vim"
+"#autocmd vimenter * NERDTree"
+let NERDTreeIgnore = ['__pycache__', '\.pyc$', '\.o$', '\.so$', '\.a$', '\.swp', '*\.swp', '\.swo', '\.swn', '\.swh', '\.swm', '\.swl', '\.swk', '\.sw*$', '[a-zA-Z]*egg[a-zA-Z]*', '.DS_Store']
+
+let NERDTreeShowHidden=1
+let g:NERDTreeWinPos="left"
+"#let g:NERDTreeDirArrows=0"
+let g:NERDTreeDirArrowExpandable = '[+]'  "cambiar flechas de nerdtree"
+let g:NERDTreeDirArrowCollapsible = '[-]'
+
+map <C-t> :NERDTreeToggle<CR>
+
+"#-----------------------------------------------------"
+"#Configuraciones de vim en general"
+set guifont=Hack   "#Tipo de letra"
+syntax enable							  "# Syntax"
+set number								  "#Numeracion"
+"#set background=dark"
+set termguicolors
+colorscheme deep-space					  "#tema"
+"#colorscheme PaperColor"
